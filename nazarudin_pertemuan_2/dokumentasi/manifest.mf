@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: nazarudin_pertemuan2.nazarudin_Latihan2
+

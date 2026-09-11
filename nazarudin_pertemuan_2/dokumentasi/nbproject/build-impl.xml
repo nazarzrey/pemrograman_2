@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="latihan2-impl" default="default" basedir="..">
+    <property file="nbproject/project.properties"/>
+
+    <target name="-init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="-init-macrodef-javac">
+        <macrodef name="javac">
+            <attribute name="srcdir"/>
+            <attribute name="destdir"/>
+            <attribute name="classpath" default=""/>
+            <sequential>
+                <javac srcdir="@{srcdir}"
+                       destdir="@{destdir}"
+                       source="${javac.source}"
+                       target="${javac.target}"
+                       encoding="${source.encoding}"
+                       debug="true"
+                       includeantruntime="false"
+                       classpath="@{classpath}"/>
+            </sequential>
+        </macrodef>
+    </target>
+
+    <target name="-compile" depends="-init,-init-macrodef-javac">
+        <javac srcdir="${src.dir}"
+               destdir="${build.classes.dir}"
+               source="${javac.source}"
+               target="${javac.target}"
+               encoding="${source.encoding}"
+               debug="true"
+               includeantruntime="false"
+               classpath="${javac.classpath}"/>
+        <copy todir="${build.classes.dir}">
+            <fileset dir="${src.dir}" excludes="**/*.java,**/*.form"/>
+        </copy>
+    </target>
+
+    <target name="compile" depends="-compile"/>
+
+    <target name="jar" depends="compile">
+        <delete file="${dist.jar}"/>
+        <jar jarfile="${dist.jar}" compress="${jar.compress}">
+            <fileset dir="${build.classes.dir}"/>
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="compile">
+        <java classname="${main.class}" fork="true">
+            <classpath>
+                <pathelement location="${build.classes.dir}"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${dist.dir}"/>
+    </target>
+
+    <target name="default" depends="jar"/>
+</project>

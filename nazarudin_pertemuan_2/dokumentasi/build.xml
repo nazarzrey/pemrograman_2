@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="latihan2" default="default" basedir=".">
+    <description>Project JFrame Form Latihan 2 - Java 8 / NetBeans 8.2.</description>
+    <import file="nbproject/build-impl.xml"/>
+</project>
