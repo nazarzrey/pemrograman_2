@@ -1,0 +1,134 @@
+# =========================
+# AI Coding Agents / Tools
+# =========================
+
+# Grok / xAI
+.grok/
+.grok*
+
+# Cursor
+.cursor/
+.cursorignore
+.cursorrules
+
+# Claude / Anthropic
+.claude/
+.claude*
+
+# Aider
+.aider*
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v3/
+
+# Continue.dev
+.continue/
+
+# GitHub Copilot
+.copilot/
+.github/copilot*
+
+# Windsurf / Codeium
+.windsurf/
+.codeium/
+
+# Tabnine
+.tabnine/
+
+# Sourcegraph Cody
+.cody/
+
+# Amazon Q / CodeWhisperer
+.aws/amazonq/
+.amazonq/
+
+# JetBrains AI / Junie
+.idea/
+*.iml
+.junie/
+
+# VS Code (opsional, uncomment jika ingin diabaikan)
+# .vscode/
+
+# Command / other agents
+.commandocode/
+.commandocde/
+.command*
+.agent/
+.agents/
+.ai/
+.llm/
+.llms/
+*codex*
+
+# Generic AI / agent caches & configs
+**/.ai/
+**/.agent/
+**/.agents/
+**/ai_cache/
+**/.cache/ai/
+**/.cache/llm/
+
+# =========================
+# Common development ignores
+# =========================
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & temp
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+.env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Build / dist
+dist/
+build/
+out/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE / Editor
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
